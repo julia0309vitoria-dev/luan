@@ -1,0 +1,183 @@
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francinaldo Aprígio - Docente de Língua Portuguesa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .profile-container {
+            background-color: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .profile-img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navegação -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <span class="serif text-xl font-bold text-blue-900">Francinaldo Aprígio</span>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#inicio" class="hover:text-blue-600 transition">Início</a>
+                <a href="#sobre" class="hover:text-blue-600 transition">Sobre</a>
+                <a href="#trajetoria" class="hover:text-blue-600 transition">Trajetória</a>
+                <a href="#filosofia" class="hover:text-blue-600 transition">Filosofia</a>
+            </div>
+            <button class="md:hidden text-2xl" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 hidden flex-col items-center justify-center space-y-8 text-2xl transition-all">
+        <a href="#inicio" onclick="toggleMenu()">Início</a>
+        <a href="#sobre" onclick="toggleMenu()">Sobre</a>
+        <a href="#trajetoria" onclick="toggleMenu()">Trajetória</a>
+        <a href="#filosofia" onclick="toggleMenu()">Filosofia</a>
+    </div>
+
+    <!-- Seção Hero -->
+    <section id="inicio" class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-white space-y-6">
+                <h1 class="serif text-4xl md:text-6xl leading-tight">Mestre em Letras e Educador por Vocação</h1>
+                <p class="text-lg text-blue-100 leading-relaxed">
+                    Três décadas dedicadas à formação de cidadãos através da Língua Portuguesa e da Literatura nas redes pública estadual e municipal.
+                </p>
+                <div class="pt-4">
+                    <a href="#sobre" class="bg-white text-blue-900 px-8 py-3 rounded-full font-bold hover:bg-blue-50 transition shadow-lg">
+                        Conheça minha história
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden shadow-2xl profile-container">
+                    <!-- A imagem agora é carregada diretamente do arquivo enviado -->
+                    <img src="image.png" 
+                         alt="Francinaldo Aprígio dos Santos" 
+                         class="profile-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="serif text-3xl md:text-4xl mb-8 text-blue-900">Sobre Francinaldo</h2>
+            <div class="space-y-6 text-lg leading-relaxed text-gray-600 text-justify md:text-center">
+                <p>
+                    Docente de Língua Portuguesa com forte influência familiar, Francinaldo sempre viu na educação o principal meio de crescimento e mudança de vida. Motivado por esses valores, escolheu construir sua trajetória na área do ensino.
+                </p>
+                <p>
+                    Com 30 anos de magistério, exerce sua profissão com dedicação e responsabilidade, sempre focando no compromisso com a formação integral de seus estudantes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trajetória Acadêmica -->
+    <section id="trajetoria" class="py-20 bg-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="serif text-3xl text-center mb-16 text-blue-900">Qualificações e Conquistas</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-graduation-cap"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Mestrado em Letras</h3>
+                    <p class="text-gray-600">Título de Mestre obtido através de estudos aprofundados na área de Letras.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-book-open"></i></div>
+                    <h3 class="font-bold text-xl mb-2">Especialização</h3>
+                    <p class="text-gray-600">Especialista em Língua, Linguística e Literatura, unindo teoria e prática.</p>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-md card-hover border-t-4 border-blue-600">
+                    <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3 class="font-bold text-xl mb-2">30 Anos de Ensino</h3>
+                    <p class="text-gray-600">Vasta experiência nas redes pública estadual e municipal de ensino.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filosofia de Ensino -->
+    <section id="filosofia" class="py-20 bg-blue-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+            <i class="fas fa-quote-right text-9xl absolute -bottom-10 -right-10"></i>
+        </div>
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="serif text-3xl md:text-4xl mb-10">Missão Educacional</h2>
+            <blockquote class="text-2xl italic font-light leading-relaxed mb-12">
+                "Ensinar representa mais do que transmitir conteúdo: é contribuir para o desenvolvimento pessoal e acadêmico de cada aluno."
+            </blockquote>
+            <p class="text-blue-200">
+                A verdadeira realização profissional está em testemunhar estudantes conquistando oportunidades e transformando suas vidas através da educação.
+            </p>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <h3 class="serif text-white text-2xl mb-6">Francinaldo Aprígio dos Santos</h3>
+            <p class="mb-8">Docente de Língua Portuguesa | Mestre em Letras</p>
+            <div class="flex justify-center space-x-6 mb-8 text-2xl">
+                <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-white transition"><i class="fas fa-envelope"></i></a>
+            </div>
+            <hr class="border-gray-800 mb-8">
+            <p class="text-sm">© <script>document.write(new Date().getFullYear())</script> - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                menu.classList.add('flex');
+            } else {
+                menu.classList.add('hidden');
+                menu.classList.remove('flex');
+            }
+        }
+    </script>
+</body>
+</html>
+
+```
